@@ -2,7 +2,7 @@ import React from 'react'
 
 const Hero = ({title, imageUrl}) => {
   return (
-    <div className='hero container flex gap-[50px] pt-[120px] pb-[120px] relative bg-[#e5e5e5]'>
+    <div className='hero container flex gap-[50px] pt-[120px] pb-[120px] relative '>
       <div className='banner flex-1 p-5 m-6'>
         <h1 className='max-w-[650px] tracking-[2px] space-x-[5px] text-[40px] font-bold'>{title}</h1>
         <p className='max-w-[650px] text-[#111] tracking-[2px] text-xl'>
