@@ -1,17 +1,39 @@
 import React from 'react'
 
-const Biography = ({imageUrl}) => {
-  return (
-    <div className='biography flex'>
-      <div className="banner w-1/2">
-        <img src={imageUrl} alt="about img" />
-      </div>
-      <div className="banner w-1/2">
-        <p className='font-bold text-4xl mb-5'>Biography</p>
-        <p className='text-xl'>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus ad veritatis, cupiditate libero, velit similique eligendi eos vitae exercitationem quia culpa voluptates veniam doloremque! Rem, vel distinctio! Ipsam magnam nisi, voluptatem eum voluptatum incidunt quam illo, aperiam exercitationem quidem odio architecto labore distinctio doloremque eos praesentium! Officiis perferendis placeat iure.</p>
-      </div>
-    </div>
-  )
+const Biography = ({ imageUrl }) => {
+    return (
+        <>
+            <div className="container biography">
+                <div className="banner">
+                    <img src={imageUrl} alt="ZeeCare Healthcare" />
+                </div>
+                <div className="banner">
+                    <p>About Us</p>
+                    <h3>Welcome to ZeeCare Healthcare</h3>
+                    <p>
+                        At ZeeCare Healthcare, we are committed to providing compassionate,
+                        high-quality medical care to individuals and families. Our
+                        multidisciplinary team of doctors, nurses, and healthcare
+                        professionals work around the clock to ensure you receive the best
+                        treatment and care possible.
+                    </p>
+                    <p>Serving communities with care and integrity since 2024.</p>
+                    <p>
+                        ZeeCare Healthcare is currently enhancing patient experience through
+                        innovative digital solutions built with the MERN stack,
+                        revolutionizing hospital management and patient engagement.
+                    </p>
+                    <p>
+                        Our mission is to make advanced healthcare accessible and
+                        affordable, combining medical excellence with cutting-edge
+                        technology to deliver seamless services.
+                    </p>
+                    <p>Your health, our priority — always.</p>
+                    <p>Technology meets compassion at ZeeCare Healthcare.</p>
+                </div>
+            </div>
+        </>
+    )
 }
 
 export default Biography

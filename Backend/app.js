@@ -15,7 +15,7 @@ config({path: "./config/config.env"})
 app.use(cors({
     origin: [process.env.CLIENT_URL, process.env.DASHBOARD_URL],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentialS: true,
+    credentials: true,
 }));
 
 app.use(cookieParser());
