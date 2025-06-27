@@ -5,3 +5,4 @@ config/config.env
 .env.development
 .env.production
 .env.*
+backend/config/config.env
