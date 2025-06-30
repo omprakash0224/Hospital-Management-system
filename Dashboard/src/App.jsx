@@ -10,7 +10,7 @@ import Login from "./components/Login";
 import AddNewDoctor from "./components/AddNewDoctor";
 import Messages from "./components/Messages";
 import Doctors from "./components/Doctors";
-import SideBar from "./components/Sidebar";
+import SideBar from "./components/SideBar";
 import AddNewAdmin from "./components/AddNewAdmin";
 import axios from "axios";
 import { ToastContainer } from "react-toastify";
