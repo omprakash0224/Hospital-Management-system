@@ -33,6 +33,10 @@ app.use("/api/v1/appointment", appointmentRouter);
 
 dbConnect();
 
+app.get("/", (req, res) => {
+  res.send("🟢 Medi-Meet Server is running!");
+});
+
 app.use(errorMiddleware);
 
 export default app;
