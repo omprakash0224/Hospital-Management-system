@@ -6,3 +6,5 @@ config/config.env
 .env.production
 .env.*
 Backend/config/config.env
+
+node_modules
