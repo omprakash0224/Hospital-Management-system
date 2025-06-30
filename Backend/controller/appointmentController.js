@@ -115,3 +115,12 @@ export const deleteAppointment = catchAsyncErrors(async (req, res, next) => {
         message: "Appointment Deleted!",
     });
 });
+
+//function to get count of appointments
+export const getAppointmentsCount = catchAsyncErrors(async (req, res, next) => {
+    const count = await Appointment.countDocuments();
+    res.status(200).json({
+        success: true,
+        count,
+    });
+});

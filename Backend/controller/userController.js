@@ -208,3 +208,12 @@ export const logoutPatient = catchAsyncErrors(async (req, res, next) => {
             message: "Patient Logged Out Successfully.",
         });
 });
+
+//function to get count of registered doctors
+export const getDoctorsCount = catchAsyncErrors(async (req, res, next) => {
+    const count = await User.countDocuments({ role: "Doctor" });
+    res.status(200).json({
+        success: true,
+        count,
+    });
+});
