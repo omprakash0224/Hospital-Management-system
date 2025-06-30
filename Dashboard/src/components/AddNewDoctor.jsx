@@ -57,7 +57,7 @@ const AddNewDoctor = () => {
       formData.append("gender", gender);
       formData.append("doctorDepartment", doctorDepartment);
       formData.append("docAvatar", docAvatar);
-      await axios.post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/doctor/addnew`, formData, {
         withCredentials: true,
         headers: { "Content-Type": "multipart/form-data" },
       })

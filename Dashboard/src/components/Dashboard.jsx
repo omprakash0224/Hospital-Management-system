@@ -15,7 +15,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchAppointments = async () => {
       try {
-        const { data } = await axios.get("http://localhost:4000/api/v1/appointment/getall", {
+        const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/appointment/getall`, {
           withCredentials: true
         })
         setAppointments(data.appointments);
@@ -26,12 +26,12 @@ const Dashboard = () => {
 
     const fetchCounts = async () => {
       try {
-        const appointmentsRes = await axios.get("http://localhost:4000/api/v1/appointment/count", {
+        const appointmentsRes = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/appointment/count`, {
           withCredentials: true
         });
         setAppointmentsCount(appointmentsRes.data.count);
 
-        const doctorsRes = await axios.get("http://localhost:4000/api/v1/user/doctors/count", {
+        const doctorsRes = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/user/doctors/count`, {
           withCredentials: true
         });
         setDoctorsCount(doctorsRes.data.count);
@@ -46,7 +46,7 @@ const Dashboard = () => {
 
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
-      const { data } = await axios.put(`http://localhost:4000/api/v1/appointment/update/${appointmentId}`, { status }, {
+      const { data } = await axios.put(`${import.meta.env.VITE_API_URL}/api/v1/appointment/update/${appointmentId}`, { status }, {
         withCredentials: true
       })
       setAppointments((prevAppointments) =>

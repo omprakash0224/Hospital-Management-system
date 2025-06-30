@@ -21,7 +21,7 @@ const Register = () => {
   const handleRegistration = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/v1/user/patient/register",
+      await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/patient/register`,
         { firstName, lastName, email, phone, nic, dob, gender, password },
         {
           withCredentials: true,
@@ -121,7 +121,7 @@ const Register = () => {
           >
             <p style={{ marginBottom: 0 }}>Already Registered?</p>
             <Link
-              to={"/signin"}
+              to={"/login"}
               style={{ textDecoration: "none", color: "#271776ca" }}
             >
               Login Now

@@ -19,7 +19,7 @@ const App = () => {
   useEffect(() => {
     const fetchUser = async () =>{
       try {
-        const response = await axios.get("http://localhost:4000/api/v1/user/patient/me", {
+        const response = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/user/patient/me`, {
           withCredentials: true,
         });
         setIsAuthenticated(true);

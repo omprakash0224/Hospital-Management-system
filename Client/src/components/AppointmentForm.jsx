@@ -32,7 +32,7 @@ const AppointmentForm = () => {
     const [doctors, setDoctors] = useState([]);
     useEffect(() => {
         const fetchDoctors = async () => {
-            const { data } = await axios.get("http://localhost:4000/api/v1/user/doctors", {
+            const { data } = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/user/doctors`, {
                 withCredentials: true
             });
             setDoctors(data.doctors);
@@ -45,7 +45,7 @@ const AppointmentForm = () => {
         e.preventDefault();
         try {
             const hasVisitedBool = Boolean(hasVisited);
-            const { data } = await axios.post("http://localhost:4000/api/v1/appointment/post",
+            const { data } = await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/appointment/post`,
                 {
                     firstName,
                     lastName,
