@@ -13,7 +13,7 @@ const app = express();
 config({path: "./config/config.env"})
 
 app.use(cors({
-    origin: [process.env.CLIENT_URL, process.env.DASHBOARD_URL, "https://medimeet-two.vercel.app/", "https://admin-dashboard-omega-neon.vercel.app/"],
+    origin: [process.env.CLIENT_URL, process.env.DASHBOARD_URL, "https://medimeet-two.vercel.app", "https://admin-dashboard-omega-neon.vercel.app"],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
 }));
