@@ -1,8 +1,8 @@
-# Hospital Management System  
+# 🏥 Hospital Management System
 
-A comprehensive **Hospital Management System** backend developed using **Node.js**, **Express.js**, and **MongoDB**. This system provides role-based user authentication for doctors, patients, and admins while ensuring secure handling of data and features like messaging and appointments.  
+A full-stack **Hospital Management System** built with the **MERN stack** (MongoDB, Express.js, React.js, Node.js). This application streamlines hospital workflows, enabling doctors, patients, and staff to manage appointments, patient records, and messages efficiently. 
 
-## Features  
+## 🚀 Features 
 - **Role-Based User Authentication**  
   - Separate roles for **Doctor**, **Patient**, and **Admin**.  
   - Authentication and authorization managed using **JWT** and **bcrypt.js**.  
@@ -14,31 +14,63 @@ A comprehensive **Hospital Management System** backend developed using **Node.js
 - **Secure Token Management**  
   - Handles multiple **JWT tokens** for added security and functionality.  
 
-## Tech Stack  
-- **Backend**: Node.js, Express.js  
-- **Database**: MongoDB  
-- **Authentication**: JWT, bcrypt.js  
+## 🛠️ Tech Stack
 
-## Installation  
+| Technology             | Description                                           |
+|------------------------|-------------------------------------------------------|
+| **MongoDB**            | NoSQL database for storing application data          |
+| **Express.js**         | Node.js framework for building RESTful APIs          |
+| **React.js**           | Frontend library for building user interfaces        |
+| **Node.js**            | JavaScript runtime for backend logic                 |
+| **Mongoose**           | ODM (Object Data Modeling) library for MongoDB       |
+| **JWT**                | Authentication using JSON Web Tokens                 |
+| **Tailwind CSS / CSS** | Utility-first CSS framework for styling the frontend |
+| **Cloudinary**         | Cloud-based image and video management service       | 
 
-### Prerequisites  
-Ensure you have the following installed:  
-- **Node.js**: v14 or higher  
-- **MongoDB**: v4.4 or higher  
+## 🔧 Installation & Setup
 
-### Steps to Set Up  
-1. **Clone the repository**:
-    
-   ```bash  
-   git clone https://github.com/your-username/Hospital-Management-system.git  
-   cd Hospital-Management-system
+### Prerequisites
 
-**Environment Variables**
+- Node.js and npm installed
+- MongoDB Atlas or local MongoDB
+- Git
 
-Create a `.env` file in the backend directory with the following:
+### Create a .env file in the backend folder and add:
 
 ```bash
-MONGODB_URI=your_mongodb_connection_string
-JWT_SECRET_KEY=your_jwt_secret
+PORT=4000
+MONGO_URL=your_mongodb_connection_string
+CLIENT_URL=http://localhost:5173
+DASHBOARD_URL=http://localhost:5174
+JWT_SECRET_KEY=your_jwt_secret_key
+JWT_EXPIRES=7d
+COOKIE_EXPIRE=7
+CLOUDINARY_CLOUD_NAME=your_cloudinary_cloud_name
+CLOUDINARY_API_SECRET=your_cloudinary_api_key
+CLOUDINARY_API_KEY=your_cloudinary_api_secret
 ```
-**Run the Application**
+## 📸 Screenshots
+
+### Admin Dashboard
+
+![Admin Dashboard](Screenshots/adminDashboard.png)
+
+### Appointment Page
+
+![Appointment Page](Screenshots/appointment.png)
+
+### Message Page
+
+![Message Page](Screenshots/message.png)
+
+### Patient Registration Page
+
+![Patient Registration Page](Screenshots/register.png)
+
+### Doctor Registration Page
+
+![Doctor Registration Page](Screenshots/addDoctor.png)
+
+### Admin Registration Page
+
+![Admin Registration Page](Screenshots/addAdmin.png)
