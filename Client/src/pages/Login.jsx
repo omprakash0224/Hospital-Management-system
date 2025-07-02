@@ -15,7 +15,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/login`,
-        { email, password, confirmPassword, role: "Patient" },
+        { email, password, role: "Patient" },
         {
           withCredentials: true,
           headers: {
@@ -57,12 +57,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input
+          {/* <input
             type="password"
             placeholder="Confirm Password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          /> */}
           <div
             style={{
               gap: "10px",
