@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "cd Client && cd Dashboard && npm install && npm run build",
+    "build": "cd client && npm install && npm run build && cd ../Dashboard && npm install && npm run build",
     "start": "cd Backend && npm install && node app.js"
   }
 }
+

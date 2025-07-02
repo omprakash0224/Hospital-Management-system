@@ -41,6 +41,11 @@ app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/dist/index.html"));
 });
 
+app.use("/admin", express.static(path.join(__dirname, "../Dashboard/dist")));
+app.get("/admin/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "../Dashboard/dist/index.html"));
+});
+
 dbConnect();
 
 app.get("/", (req, res) => {
