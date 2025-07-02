@@ -17,7 +17,7 @@ const Login = () => {
     e.preventDefault();
     try {
       await axios.post(`${import.meta.env.VITE_API_URL}/api/v1/user/login`,
-        { email, password, confirmPassword, role: "Admin" },
+        { email, password, role: "Admin" },
         {
           withCredentials: true,
           headers: { "Content-Type": "application/json" },
@@ -58,12 +58,12 @@ const Login = () => {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <input
+          {/* <input
             type="password"
             placeholder="Confirm Password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-          />
+          /> */}
           <div style={{ justifyContent: "center", alignItems: "center" }}>
             <button type="submit">Login</button>
           </div>
